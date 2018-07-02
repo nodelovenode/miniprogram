@@ -1,0 +1,23 @@
+  <form bindsubmit="formSubmit">
+<view class="bg">
+    <view class="hint" wx:if="{{formlist==null||formlist.length==0}}">对不起，您暂时还未生成任何二维码!</view>
+  <view class="person" wx:for="{{formlist}}">
+    <view data-text="{{item.firstname}}" bindtap="formSubmit" class="row">
+      <view class="td">申请人</view>
+      <view class="td" >{{item.firstname}} {{item.lastname}}</view>  
+    </view>
+    <view class="row">
+       <view class="person">
+        <image class="img" bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
+    </view>  
+    </view>
+  </view>
+  </view>
+
+
+</form>
+
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box">
+  <canvas hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas" />
+</view>

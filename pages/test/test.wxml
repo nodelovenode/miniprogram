@@ -1,0 +1,30 @@
+<!-- <view>
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:300px;"
+    class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+    <view class="item" wx:for="{{list}}">
+      <image class="img" src="{{item.pic_url}}"></image>
+      <view class="text">
+        <text class="title">{{item.name}}</text>
+        <text class="description">{{item.short_description}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+  </view>
+</view> -->
+<view class="hx" bindtap='ocr'>
+  ocr识别
+</view>
+<view class="nr" bindtap='cam'>
+  <button style="margin:30rpx;" bindtap="chooseimage">获取图片</button>
+  <image src="{{tempFilePaths }}" mode="scaleToFill" style="height: 260px" />
+</view>
+
+<view class="bt-view" >
+<view class="bt" wx:for="{{ocrlist.data.items}}">
+  {{item.itemstring}}
+</view>
+</view>

@@ -1,0 +1,61 @@
+<view class="bg">
+  <view class="title">
+    <input class="input" placeholder="北京/BJS" bindinput='cityinput' />
+  </view>
+  <view>
+    <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==0?'on':''}}" data-current="0" bindtap="swichNav">境内</view>
+      <view class="swiper-tab-list {{currentTab==1?'on':''}}" data-current="1" bindtap="swichNav">境外/港澳台</view>
+    </view>
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height: {{clientHeight?clientHeight+'px':'auto'}}" bindchange="bindChange">
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+          <view class="citylist">
+            <!-- <view class="tab1-title">热门城市</view>
+            <view class="tab1-wrap" wx:for="{{cnhotcitylist}}" data-index="{{index}}" bindtap="bindgetcnhotcity">
+              <view class="tab1-wrap">
+                <view class="tab1-center">
+                  {{item.city}}
+                </view>
+              </view>
+            </view> -->
+
+            <view class="tab1" wx:for="{{datalist}}" data-index="{{index}}" bindtap="bindgetcity">
+              <view hidden="{{item.countrycode!='CN'}}" class="tab1-row">
+                <view class="tab1-col">
+                  {{item.city}}
+                </view>
+                <view class="tab1-col">
+                  {{item.citycode}}
+                </view>
+                <view class="tab1-col">
+                  {{item.flightport}}({{item.iata}})
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+          <view class="citylist">
+            <view class="tab1" wx:for="{{datalist}}" data-index="{{index}}" bindtap="bindgetcity">
+              <view hidden="{{item.countrycode=='CN'}}" class="tab1-row">
+                <view class="tab1-col">
+                  {{item.city}}
+                </view>
+                <view class="tab1-col">
+                  {{item.citycode}}
+                </view>
+                <view class="tab1-col">
+                  {{item.flightport}}({{item.iata}})
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

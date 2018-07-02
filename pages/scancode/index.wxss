@@ -1,0 +1,154 @@
+/* pages/main/index.wxss */
+
+.container-box {
+  background-color: #efeff4;
+  height: 100vh;
+}
+
+.img-box {
+  padding: 32rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: relative;
+}
+
+.img-box image {
+  width: 686rpx;
+  height: 686rpx;
+  background-color: #f9f9f9;
+}
+
+.input-row {
+  margin: 30rpx auto;
+  border-bottom: 1rpx solid #e5e5e5;
+  border-top: 1rpx solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  height: 70%;
+  padding: 0 32rpx;
+  background-color: #fff;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.input-row input {
+  margin-left: 100rpx;
+  flex: 1;
+}
+
+.mybtn {
+  width: 686rpx;
+  margin: 60rpx auto;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.canvas-box {
+  position: fixed;
+  top: 999999rpx;
+  left: 0;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  background-color: #55b4ea;
+}
+
+.person {
+  background-color: #fff;
+  padding: 5px;
+}
+
+.row {
+  height: 50px;
+  padding-left: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.td {
+  margin-right: 10px;
+}
+
+.img {
+  width: 686rpx;
+  height: 686rpx;
+  background-color: #f9f9f9;
+}
+
+.hint {
+  text-align: center;
+  font-family: "华文黑体";
+  font-size: 14px;
+  height: 40px;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #55b4ea;
+}
+
+.td {
+  margin-right: 5px;
+}
+
+.trip {
+  font-family: "华文黑体";
+  font-size: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 100px;
+}
+
+.tripdetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.td1 {
+    font-family: "华文黑体";
+  font-size: 11px;
+  color: #55b4ea;
+}
+.person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #e5e5e5;
+    border-radius: 5px;
+        font-family: "华文黑体";
+  font-size: 11px;
+  color: #55b4ea;
+  padding-left: 20px; 
+}
+
+.cnt {
+    border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: "华文黑体";
+  font-size: 13px;
+}

@@ -1,0 +1,79 @@
+/* pages/user/newuser.wxss */
+
+.bg {
+  background-color: #55b4ea;
+}
+
+.block {
+  height: 930px;
+}
+
+
+.row {
+  border: 1px solid #eee;
+  margin: 10px;
+  height: 40px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+.section2 {
+  padding-left: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 15px;
+  background-color: #fff;
+  font-family: "华文黑体";
+  font-size: 15px;
+  height: 240px;
+}
+
+
+.bt_view {
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section1 {
+
+  margin: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "华文黑体";
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bt-save{
+margin: 5px;
+    font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  background-color: #55b4ea;
+  color: white;
+  border-radius: 5px;
+}
+.button_bt {
+  font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  background-color: #55b4ea;
+  color: white;
+}
+
+.button_bt1 {
+  font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  background-color: #eeeeee;
+  color: gray;
+}

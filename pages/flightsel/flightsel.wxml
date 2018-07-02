@@ -1,0 +1,78 @@
+<!--pages/flightsel/flightsel.wxml-->
+<view>
+  <view class="body-top">
+    <view class="col1">
+      <view class="nav">
+        <view class="{{selectedCity?'blue':'default'}}" bindtap="selectedCity">按起降城市</view>
+        <view class="{{selectedFlight?'blue':'default'}}" bindtap="selectedFlight">按航班号码</view>
+      </view>
+    </view>
+    <view class="{{selectedCity?'show':'hidden'}}">
+      <form bindsubmit="citysubmit">
+        <view class="col2">
+          <view class="newrow">
+            <view class="gk">
+              <image style='width:30px;height:30px;' src='../index/img/city.png'></image>
+            </view>
+            <view class="gk">
+              <image style='width:30px;height:30px;' src='../index/img/city.png'></image>
+            </view>
+            <view class="gk">
+              <image style='width:30px;height:30px;' src='../index/img/riqi.png'></image>
+            </view>
+          </view>
+          <view class="newrow">
+            <view class="gk1">
+              <input hidden='true' class="input" name="dep" value='{{leavecitycode}}' />
+              <input class="input" name="depcityInput" value='{{leavecity}}' placeholder="请输入出发城市" bindtap="changeleavecity" disabled="ture" />
+            </view>
+            <view class="gk1">
+              <input hidden='true' class="input" name="arr" value='{{arrivecitycode}}' />
+              <input class="input" name="arrcityInput" value='{{arrivecity}}' placeholder="请输入到达城市" bindtap="changearrivecity" disabled="ture" />
+            </view>
+            <picker mode="date" name="citypicker" start="{{date}}" end="2020-01-01" value="{{date}}" bindchange="bindDateChange">
+              <view class="gk1">{{date}}</view>
+            </picker>
+          </view>
+        </view>
+        <view>
+          <button class="button1" form-type="submit">查询</button>
+          <!-- <view hidden="ture" wx:for="{{datalist}}" data-index="{{index}}" bindtap="citysubmit"></view> -->
+        </view>
+        <view>
+          <text class="t1" bindtap="offlinedecl">如果网络不畅或无网络请点击这里</text>
+        </view>
+      </form>
+    </view>
+    <view class="{{selectedFlight?'show':'hidden'}}">
+      <view class="col2">
+        <form bindsubmit="flightnosubmit">
+          <view class="col2">
+            <view class="newrow">
+              <view class="gk">
+                <image style='width:30px;height:30px;' src='../index/img/city.png'></image>
+              </view>
+              <view class="gk">
+                <image style='width:30px;height:30px;' src='../index/img/riqi.png'></image>
+              </view>
+            </view>
+            <view class="newrow">
+              <view class="gk1">
+                <input class="input" name="flightnoInput" placeholder="请输入航班号码" value="{{flightno}}" />
+              </view>
+              <picker mode="date" name="citypicker" start="{{date}}" end="2020-01-01" bindchange="bindDateChange">
+                <view class="gk1">{{date}}</view>
+              </picker>
+            </view>
+          </view>
+          <view>
+            <button class="button1" form-type="submit">查询</button>
+          </view>
+          <view>
+            <text class="t1" bindtap="offlinedecl">如果网络不畅或无网络请点击这里</text>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+</view>

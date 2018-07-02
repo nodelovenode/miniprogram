@@ -1,0 +1,128 @@
+/* pages/user/newuser.wxss */
+
+.bg {
+  background-color: #55b4ea;
+}
+.title {
+    background-color: #55b4ea;
+      font-family: "华文黑体";
+  font-size: 15px;
+  text-align: center;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  height: 50px;
+}
+.del{
+  font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  align-items: center;
+  background-color: #eee;
+  color: gray;
+  border: 0 solid #eee;
+  border-radius: 6px;
+  height: 30px;
+  width: 100px;
+  margin-left: 10px;
+
+
+}
+.row {
+  margin: 10px;
+  height: 20%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.section2 {
+  padding-left: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "华文黑体";
+  font-size: 15px;
+  height: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.button_bt {
+  font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  background-color: #55b4ea;
+  color: white;
+}
+
+.button_bt1 {
+  font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  background-color: #eee;
+  color: gray;
+  border: 0 solid #eee;
+  border-radius: 6px;
+}
+
+.bt_view {
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section1 {
+  height: 10%;
+  margin: 10%;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: "华文黑体";
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.td {
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  width: 80%;
+  color: #55b4ea;
+}
+
+.img {
+  width: 15%;
+}
+
+.row-r {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.bigtd {
+  font-family: "华文黑体";
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.bt-save{
+margin: 5px;
+    font-family: "华文黑体";
+  font-size: 13px;
+  text-align: center;
+  background-color: #55b4ea;
+  color: white;
+  border-radius: 5px;
+}

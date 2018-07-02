@@ -1,0 +1,48 @@
+/* pages/passport/passport.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.body {
+  width: 90%;
+  margin: 5%;
+}
+
+.tittle {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "宋体";
+}
+
+.content {
+  text-indent: 20px;
+  text-align: left;
+  font-size: 15px;
+  font-family: "宋体";
+  line-height: 30px;
+}
+
+.table {
+  border: 1px solid #000;
+}
+
+.table_tittle {
+  border-bottom: 1px solid #000;
+  font-size: 15px;
+  font-family: "宋体";
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.table_content {
+  text-indent: 20px;
+  text-align: left;
+  font-size: 15px;
+  font-family: "宋体";
+  line-height: 30px;
+  border-bottom: 1px solid #000;
+}

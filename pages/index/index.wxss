@@ -1,0 +1,44 @@
+
+.bg {
+  background-color: #55b4ea;
+ position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.body{
+  width: 100%;
+  height:40%;
+
+}
+.mid{
+margin-bottom: 5px;
+  
+display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+ 
+
+}
+.bt {
+width: 100%;
+  height: 70px;
+ border: 10px;
+ margin: 10px;
+   border-radius:5px;
+   background-color: #ffffff;
+   font-family: "华文黑体";
+   font-size: 13px;
+   text-align:center;
+   word-break:break-all;
+   align-items: center;
+}
+.top {
+  width: 100%;
+  height: 50%;
+
+}
+
+.midimg{
+  padding-top: 10px;
+}

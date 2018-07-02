@@ -1,0 +1,50 @@
+<!--pages/form/form.wxml-->
+<view  style="background-color:#55b4ea;height:{{winHeight}}px;">
+  <view wx:for="{{detaillist}}" class="form1">
+
+    <view class="body1">
+      <view class="row">
+
+        <view class="itemView">姓：{{item.firstname}}</view>
+      </view>
+      <view class="row">
+        <view class="itemView">名：{{item.lastname}}</view>
+      </view>
+      <view class="row">
+        <view class="itemView">出生日期：{{item.birthday}}</view>
+      </view>
+      <view class="row">
+        <view class="itemView">航班：{{item.flightno}}</view>
+      </view>
+     <view class="row1">
+            <view class="t1">1.你是否曾在日本或其他国家的刑事案件中被判有罪？(Have you ever been found guilty in a criminal case in japan or anther country?)</view>
+
+      <radio-group name="otheroption1{{index}}" bindchange="radioChange">
+
+          <radio checked="{{item.otheroption1==0}}" value="0" name="1" />否
+
+          <radio checked="{{item.otheroption1==1}}" value="1" name="1" />是
+      </radio-group>
+
+      </view>
+           <view class="row1">
+<view class="t1">2.您目前是否持有毒品、大麻、鸦片、助燃剂或其他受控物质、剑、炸药或其他物品？(Do you presently have in you possession narcotics,marijuana,opium,stimlants,or other controlled substance,swords,explosives or other such items?)</view>
+      <radio-group  name="otheroption1{{index}}" bindchange="radioChange">
+
+          <radio checked="{{item.otheroption2==0}}" value="0" name="1" />否
+
+          <radio checked="{{item.otheroption2==1}}" value="1" name="1" />是
+      </radio-group>
+      </view>
+
+
+
+  </view>
+
+  </view>
+  <view class="btview"  bindtap='returnpage'>
+
+           <button type="primary"class="button_bt" bindtap="exitpage">返回</button>
+
+  </view>
+</view>

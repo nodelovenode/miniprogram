@@ -1,0 +1,38 @@
+
+<view class="bg">
+  <scroll-view scroll-y="true" style="background-color:#55b4ea;  height: {{clientHeight?clientHeight+'px':'auto'}}" >
+  <view class="title" bindtap="newuser">
+    <image style="padding-top: 3px;padding-bottom:3px;margin-right:4px;width: 25px; height: 25px; background-color: #ffffff;" mode="scaleToFill" src="../index/img/add.png"></image>新增申请人
+  </view>
+    <view class="hint" wx:if="{{list==null||list.length==0}}">对不起，您暂时还未添加任何申请人!</view>
+
+    <view wx:for="{{list}}">
+      <view class="section" data-select="{{item.portcode}}" bindtap="modifyperson">
+        <view data-select="{{item.portcode}}" class="content">{{item.fullname}}
+        </view>
+        <view class="ct">
+          <view class='td1'>护照号码 </view>
+          <view name="portcode" class='td2'>{{item.portcode}}</view>
+        </view>
+                <view class="ct">
+          <view class='td1'>国籍 </view>
+          <view name="country" class='td2'>{{item.country}}</view>
+        </view>
+        <view>
+
+        </view>
+        <view hidden='false'>
+          <!--显示申请人信息详细内容  -->
+
+          <view class='row'>{{item.fullname}}</view>
+          <view class='row'>护照号码 {{item.portcode}}</view>
+        </view>
+
+      </view>
+    </view>
+
+
+
+  </scroll-view>
+
+</view>

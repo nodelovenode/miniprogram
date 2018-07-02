@@ -1,0 +1,133 @@
+.bg {
+  background-color: #fff;
+}
+
+.hint {
+  text-align: center;
+  font-family: "华文黑体";
+  font-size: 14px;
+  height: 30px;
+  padding-top: 10px;
+  background-color: #55b4ea;
+}
+
+.text {
+  border: 1px solid #0f0;
+  margin-top: 5px;
+}
+
+.checkbox {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  justify-content: center;
+}
+
+.bottom-trip {
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  font-family: "华文黑体";
+  font-size: 13px;
+  color: gray;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  border: 1px solid #eee;
+}
+
+.r {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+}
+
+.rh {
+  display: flex;
+  flex-direction: row;
+}
+
+.bq {
+  font-family: "华文黑体";
+  font-size: 15px;
+  color: gray;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.nr {
+  margin-bottom: 10px;
+  font-family: "华文黑体";
+  font-size: 13px;
+  color: #55b4ea;
+  width: 100%;
+}
+.chb{
+  align-content: center;
+  justify-content: center
+}
+.row {
+  border-bottom: 1px solid #55b4ea;
+  font-family: "华文黑体";
+  font-size: 12px;
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-left: 10px;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.title {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
+  text-align: center;
+  justify-content: center;
+  height: 40px;
+  font-family: "华文黑体";
+  font-size: 13px;
+}
+
+.content {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-top: 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.btview {
+  background-color: #55b4ea;
+  border: 1px solid #55b4ea;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button_bt {
+  width: 100%;
+  font-family: "华文黑体";
+  font-size: 15px;
+  text-align: center;
+  background-color: #0f0;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,91 @@
+<view class="bg">
+  <view style='background-color:#55b4ea;height:{{winHeight}}px; '>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view data-select="{{tripno}}" class="title" bindtap='deltrip'>
+        <view>行程ID：{{tripno}}</view>
+      </view>
+      <view class="section2">
+
+        <picker name="_gdate" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="pickgdate">
+          <view class="row">
+            <view class='img'>
+              <image style='width:25px;height:25px;' src='../index/img/riqi.png'></image>
+            </view>
+
+            <input hidden='false' name="gdate" placeholder="出发日期：" value="{{date}}" />
+            <view class="row-r">
+              <view class="bigtd"> 出发日期</view>
+              <view class="td" wx:if="{{lable1}}">{{list[0].gdate}} </view>
+              <view class="td" wx:else>{{date}}</view>
+            </view>
+
+
+          </view>
+        </picker>
+
+        <!-- <picker name="_leaveplace" bindchange="pickleavecity" range-key='name' value="{{leaveplace[leavecityindex].name}}" range="{{leaveplace}}"> -->
+          <view class="row">
+            <view class="img">
+              <image style='width:25px;height:25px;' src='../index/img/city.png'></image>
+            </view>
+            <input hidden='false'  bindtap="changeleavecity" name="leaveplace" placeholder="出发城市" value="{{leavecity}}" />
+            <view class="row-r" bindtap="changeleavecity">
+              <view class="bigtd"> 出发城市</view>
+               <view class="td" wx:if="{{lable2}}">{{list[0].leaveplace}} </view>
+              <view class="td" wx:else>{{leavecity}}
+              </view> 
+              <!-- <view class="td">{{leaveplace[leavecityindex].name}}</view> -->
+            </view>
+          </view>
+        <!-- </picker>
+        <picker name="_arriveplace" bindchange="pickarrivecity" range-key='name' value="{{leaveplace[arrivecityindex].name}}" range="{{leaveplace}}"> -->
+          <view class="row">
+            <view class="img">
+              <image style='width:25px;height:25px;' src='../index/img/city.png'></image>
+            </view>
+
+            <input hidden='false'  bindtap="changearrivecity" name="arriveplace" placeholder="到达城市" value="{{arrivecity}}" />
+            <view class="row-r"   bindtap="changearrivecity">
+              <view class="bigtd"> 到达城市</view>
+               <view class="td" wx:if="{{lable3}}">{{list[0].arriveplace}} </view>
+              <view class="td" wx:else>{{arrivecity}} </view> 
+              <!-- <view class="td">{{leaveplace[arrivecityindex].name}}</view> -->
+            </view>
+          </view>
+        <!-- </picker> -->
+
+
+        <view class="row">
+          <view class="img">
+            <image style='width:25px;height:25px;' src='../index/img/city.png'></image>
+          </view>
+          <view class="row-r">
+            <view class="bigtd"> 航班号</view>
+            <view class="td">
+              <input name="flightno" value="{{list[0].flightno}}" placeholder="" focus="{{focus}}" /> </view>
+
+          </view>
+
+
+        </view>
+
+      </view>
+      <view class="section1">
+        <view  data-select="{{tripno}}" class="bt-save">
+          <button hidden="{{showdel==true}}" class="button_bt" formType="submit">完成新增</button>
+        </view>
+        <view hidden="{{showdel==false}}" data-select="{{tripno}}" class="bt-save">
+          <button hidden="{{showdel==false}}" class="button_bt" formType="submit">完成编辑</button>
+        </view>
+        <view hidden="{{showdel==false}}"data-select="{{tripno}}" class="bt-save" bindtap='deltrip'>
+          <button hidden="{{showdel==false}}" class="button_bt" bindtap='deltrip'>删除</button> 
+        </view>
+        <view  class="bt-save">
+        <button class="button_bt1" bindtap='returnpage'>取消</button>
+                </view>
+      </view>
+    </form>
+
+  </view>
+
+</view>

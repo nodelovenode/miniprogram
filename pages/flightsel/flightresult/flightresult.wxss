@@ -1,0 +1,77 @@
+/* pages/flightsel/flightresult/flightresult.wxss */
+
+.result-box {
+}
+
+.result-col {
+  display: flex;
+  flex-flow: column;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #ffffff;
+  border-radius: 10px; 
+}
+
+.result-row1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.result-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+border-bottom: 1px solid red;
+}
+
+.result-row1-view {
+  margin: 5px;
+  font-family: "华文黑体";
+  font-size: 12px;
+}
+
+.result-row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.result-row2-view {
+  margin: 10px;
+  font-family: "华文黑体";
+  font-size: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-row3 {
+  font-family: "华文黑体";
+  font-size: 12px;
+  color: red;
+text-align:  center;
+  padding-bottom: 10px;
+}
+
+.result-button {
+  width: 100%;
+  border-radius: 5px;
+  margin: 3% auto;
+  padding-top: 2px;
+  font-size: 15px;
+  background-color: #55b4ea;
+  color: white;
+  overflow: hidden;
+  height: 40px;
+  font-family: "华文黑体";
+  position: fixed;
+  bottom: 0;
+}
+
+.result::after {
+  border: 1px solid #55b4ea;
+}

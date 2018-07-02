@@ -1,0 +1,45 @@
+<view class="bg">
+
+
+  <scroll-view style=" background-color:#55b4ea;  height: {{clientHeight?clientHeight+'px':'auto'}}" scroll-y="true">
+    <view class="title" bindtap="newtrip">
+    <image style="padding-top: 3px;padding-bottom:3px;margin-right:4px;width: 25px; height: 24px; background-color: #ffffff;" mode="scaleToFill" src="../index/img/add.png"></image>新增行程
+  </view>
+    <view class="hint" wx:if="{{trip==null||trip.length==0}}">对不起，您暂时还未添加任何行程!</view>
+    <view wx:for="{{trip}}" wx:for-item="item" wx:for-index="idx">
+      <view wx:if="{{item.status==0}}"data-select="{{item.uuid}}" class='item-container'>
+        <view data-select="{{item.uuid}}" bindtap="chooseperson" class='row1'>行程ID：{{item.uuid}}</view>
+        <view data-select="{{item.uuid}}" bindtap="chooseperson" class='row'>
+          <view class='td1'> {{item.leaveplace}} </view>
+
+          <image wx:if="{{showimg}}" style="width: 60px; height: 60px; " mode="aspectFit" src="../index/img/point.png"></image>
+          <view class='td1'> {{item.arriveplace}} </view>
+
+
+        </view>
+        <view data-select="{{item.uuid}}" bindtap="chooseperson" class='row'>
+
+          <view class='td2'>出发日期{{item.gdate}} </view>
+          <view wx:if="{{showimg}}" class='td2'>/</view>
+          <view class='td2'>航班号{{item.flightno}} </view>
+        </view>
+        <!-- <view class='row1'>
+
+            <view wx:if="{{showimg}}" class='td3'>
+              <view wx:if="{{item.finished==0}}"> 未完成</view>
+              <view wx:else> 已完成 </view>
+
+            </view>
+          </view> -->
+        <view class='row-bottom'>
+          <view class="td" data-select="{{item.uuid}}" bindtap='edittrip'>修改</view>
+          <view class="tdr" bindtap='deltrip' data-select="{{item.uuid}}">删除</view>
+        </view>
+      </view>
+    </view>
+
+
+  </scroll-view>
+
+
+</view>

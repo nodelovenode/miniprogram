@@ -1,0 +1,56 @@
+<form bindsubmit="formSubmit">
+
+     <view class="hint" wx:if="{{formlist==null||formlist.length==0}}">对不起，您暂时还未生成任何二维码!</view> 
+    <!--显示行程信息，点击行程信息之后显示该行程下的申请人，点击申请人弹出新页面显示二维码  -->
+<view style='background-color:#55b4ea ;'>
+  <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+
+    <view wx:for="{{formlist}}" wx:key="id" wx:for-item="item">
+      <view wx:if="{{showhint[index]==false}}" class="trip" data-text="{{index}}" data-select="{{showuser}}"  bindtap='changeshowuser'>
+        <!--显示行程信息  -->
+        <view style='border-bottom:1px solid #eee ;padding-top:5px; padding-bottom:5px;'>行程ID：{{item.trip.uuid}}</view>
+        <view class="tripdetail">
+          <view>{{item.trip.leaveplace}}</view>
+          <view>
+            <image style="width: 40px; height: 40px; " mode="aspectFit" src="../index/img/point.png"></image>
+          </view>
+          <view>{{item.trip.arriveplace}}</view>
+        </view>
+         <view class="tripdetail">
+        <view class="td">航班号{{item.trip.flightno}}</view>
+        <view class="td">出发日期{{item.trip.gdate}}</view>
+          <view class="td1">申请人</view>
+        </view>    
+
+
+      </view>
+      <view class="cnt" wx:if="{{showuser[index]}}" >
+<view   wx:for="{{item.trip.formlist}}" wx:for-item="twodata" wx:key="id">
+          <view  bindtap="showscancode" data-text="{{twodata.firstname+twodata.lastname}}" data-select="{{item.trip.uuid}}" class="person">
+            <view >申请人：</view>
+            <view >{{twodata.firstname}} {{twodata.lastname}}</view>
+          </view>
+        </view>
+    </view>
+</view>
+    <!-- <view class="person" wx:for="{{formlist}}">
+      <view data-text="{{item.firstname}}" bindtap="formSubmit" class="row">
+        <view class="td">申请人</view>
+        <view class="td">{{item.firstname}} {{item.lastname}}</view>
+      </view>
+    </view> -->
+
+  </scroll-view>
+  </view>
+  <!-- <view class="person">
+    <image class="img" bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
+  </view>  -->
+
+
+
+</form>
+
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box">
+  <canvas hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas" />
+</view>

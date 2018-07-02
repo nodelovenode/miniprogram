@@ -1,0 +1,3 @@
+<view wx:for="{{datalist}}">
+<view>{{item.itemstring}}</view>
+</view>

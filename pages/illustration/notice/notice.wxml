@@ -1,0 +1,15 @@
+<!--pages/illustration/notice/notice.wxml-->
+<view>
+  <view wx:for="{{newdatalist}}"></view>
+  <!-- <view>{{newdatalist.countryname}}</view> -->
+  <view class="title">入境须知</view>
+  <view class="content">{{newdatalist.inotice}}</view>
+  <view class="title">出境须知</view>
+  <view class="content">{{newdatalist.enotice}}</view>
+  <!-- <view class="title">海关规定</view> -->
+  <view class="title">入境海关规定</view>
+  <view class="content">{{newdatalist.icustoms}}</view>
+  <view class="title">出境海关规定</view>
+  <view class="content">{{newdatalist.ecustoms}}</view>
+
+</view>

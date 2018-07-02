@@ -1,0 +1,68 @@
+<view style="height:{{winHeight-50}}px">
+  <view class="head">
+    <view wx:if="{{showmenu==false}}" class="logo">
+
+      <image style="width: 100px; height: 100px; " mode="scaleToFill" src="../index/img/nodata.png"></image>
+      <view>欢迎使用易飞享小程序，伴您出行无忧</view>
+      <view>本程序由信城通公司提供</view>
+    </view>
+
+    <view wx:if="{{showpriv}}" class="top">
+      <button class="button_bt" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信访问授权</button>
+
+    </view>
+    <!-- <view wx:if="{{showpriv==false&&showmenu==false}}" class="top">
+      <button class="button_bt" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" bindtap="setphonenumber">登录</button>
+
+    </view>  -->
+
+    <view wx:if="{{showmenu}}" class="usertop">
+      <view class="usertop-left" bindtap='modalcnt'>
+        <image class="profile" mode="scaleToFill" src="../index/img/31.png"></image>
+        <text hidden='{{ifca==false}}'>已实名</text>
+        <text hidden='{{ifca==true}}'>未实名</text>
+        
+      </view>
+      <view class="usertop-right">
+        <view class="usertop-right-b">欢迎您，{{username}}</view>
+        <!-- <view class="usertop-right-c">个人积分 {{phoneno}}</view> -->
+      </view>
+    </view>
+
+
+  </view>
+  <view class="body" wx:if="{{showmenu}}">
+    <!-- <view class="row" bindtap='trip'>
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/trip.png"></image>
+      <text class="t1">我的行程</text>
+    </view> -->
+    <view class="row" bindtap='gotocontact'>
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/311.png"></image>
+      <text class="t1">常用申请人</text>
+    </view>
+    <view class="row" bindtap='gotoform'>
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/312.png"></image>
+      <text class="t1">我的表单</text>
+
+    </view>
+    <view class="row" bindtap="gotoscancode">
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/313.png"></image>
+      <text class="t1">我的二维码</text>
+
+    </view>
+    <view class="row" bindtap='uploaddata'>
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/314.png"></image>
+      <text class="t1">上传数据</text>
+
+    </view>
+    <view class="row" bindtap='clearbuffer'>
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/clear.png"></image>
+      <text class="t1">清除缓存</text>
+    </view>
+    <!-- <view class="row" bindtap='exitlogin'>
+      <image style="width: 30px; height: 30px; margin-right:10px" mode="scaleToFill" src="../index/img/315.png"></image>
+      <text class="t1">退出</text>
+
+    </view> -->
+  </view>
+</view>

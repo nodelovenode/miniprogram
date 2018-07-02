@@ -1,0 +1,41 @@
+<view  style="background-color:#55b4ea;height:{{winHeight}}px;">
+  <view class="title" bindtap="newuser">
+    <image style="padding-top: 3px;padding-bottom:3px;margin-right:4px;width: 25px; height: 25px; background-color: #ffffff;" mode="scaleToFill" src="../index/img/add.png"></image>新增申请人
+  </view>
+    <view class="hint" wx:if="{{list==null||list.length==0}}">对不起，您暂时还未添加任何申请人!</view>
+  <scroll-view  hidden ="{{list==null||list.length==0}}" scroll-top="{{scrollTop}}" scroll-y="true" style="background-color:#55b4ea;height:{{winHeight-100}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+
+    <view class="cnt">
+      <checkbox-group bindchange="checkboxChange">
+        <view class="checkbox" wx:for="{{list}}">
+          <view class="row" bindtap="modifyperson" data-select="{{item.portcode}}">
+            
+            <view class="r">
+
+              <view class="rh">
+                <view class="bq">姓名：</view>
+                <view class="nr"> {{item.fullname}}</view>
+
+              </view>
+
+              <view class="rh">
+                <view class="bq">护照号码: </view>
+                <view class="nr">{{item.portcode}}</view>
+              </view>
+
+            </view>
+
+          </view>
+<view class="chb">
+          <checkbox value="{{index}}" checked="{{item.checked}}" />
+    </view>
+
+        </view>
+      </checkbox-group>
+    </view>
+  </scroll-view>
+  <view class="btview">
+    <button type="primary" disabled= "{{(list==null||list.length==0)}}" class="button_bt" bindtap="godecl">申报入境表单</button>
+  </view>
+
+</view>

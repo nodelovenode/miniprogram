@@ -1,0 +1,59 @@
+<view style="background-color:#55b4ea;height:{{winHeight}}px;">
+  <checkbox-group bindchange="checkboxChange">
+
+    <view class="row">
+
+      <!-- 上传申请人 -->
+      <view class='section'>
+        <view class="td">
+          申请人信息
+        </view>
+
+        <view class="td1">
+          {{personlist.length==null?0:personlist.length}}条
+        </view>
+      </view>
+      <view class="td2">
+        <checkbox value="0" checked="{{item.checked}}" />
+      </view>
+    </view>
+    <view class="row">
+
+       <!-- 上传行程 -->
+      <view class='section'>
+        <view class="td">
+          行程信息
+        </view>
+
+        <view class="td1">
+         {{triplist.length==null?0:triplist.length}}条
+        </view>
+      </view>
+      <view  class="td2">
+        <checkbox value="1" checked="{{item.checked}}" />
+      </view>
+    </view>
+    <view class="row">
+
+      <!-- 上传表单 -->
+      <view class='section'>
+        <view class="td">
+          表单信息
+        </view>
+
+        <view class="td1">
+          {{formlist.length==null?0:formlist.length}}条
+        </view>
+      </view>
+      <view  class="td2">
+        <checkbox value="2" checked="{{item.checked}}" />
+      </view>
+    </view>
+
+  </checkbox-group>
+  <view class="btview"  bindtap='upload'>
+
+           <button type="primary"class="button_bt" bindtap="upload">上传到云端</button>
+
+  </view>
+</view>

@@ -1,0 +1,64 @@
+{
+  "pages": [
+
+    "pages/index/index",
+      "pages/user/imgocr",
+    "pages/formlist/formlist",
+    "pages/formlist/detail",
+    "pages/system/upload",
+        "pages/user/newuser",
+    "pages/user/user",
+    "pages/person/person",
+    "pages/trip/trip",
+    "pages/center/center",
+    "pages/trip/newtrip",
+    "pages/scancode/index",
+    "pages/scancode/detail",
+    "pages/form/form",
+    "pages/form/formlist",
+    "pages/form/scancode",
+    "pages/person/userinfo",
+    "pages/redirect/person",
+    "pages/person/id",
+    "pages/test/test",
+    "pages/formshow/formshow",
+    "pages/passport/passport",
+    "pages/flightsel/flightsel",
+    "pages/flightsel/citysel/citysel",
+    "pages/flightsel/flightresult/flightresult",
+    "pages/flightsel/flightdyn/flightdyn",
+    "pages/illustration/illustration",
+    "pages/illustration/notice/notice"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#55b4ea",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+ 
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/pages/index/img/11.png",
+        "selectedIconPath": "/pages/index/img/12.png",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/pages/index/img/31.png",
+        "selectedIconPath": "/pages/index/img/32.png",
+        "pagePath": "pages/person/person",
+        "text": "我"
+      }
+    ]
+  }
+}

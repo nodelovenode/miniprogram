@@ -1,0 +1,19 @@
+<!--pages/illustration/illustration.wxml-->
+<view>
+  <view wx:for="{{datalist}}" wx:key="id" wx:for-item="two">
+    <view class="continent-box">{{two.continent}}</view>
+    <view class="country-box">
+
+
+      <view class="country" wx:for="{{two.data}}" wx:for-item="countrynamelist" wx:key="id">
+        <view>
+          <image src='https://mp.itownet.cn/linshi/{{countrynamelist.ico}}' mode='aspectFit' style="width: 50px; height: 50px; background-color: #eeeeee;"></image>
+        </view>
+        <view>
+          <view bindtap="bindgetcountry" data-id="{{countrynamelist.id}}">{{countrynamelist.countryname}}</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

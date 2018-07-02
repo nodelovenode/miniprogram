@@ -1,0 +1,156 @@
+<view class="bg">
+     <scroll-view style="background-color:#55b4ea;height:{{winHeight}}px;" scroll-y="true">
+
+<!--扫描显示图片  -->
+<view hidden="{{hideimg}}">
+<image src="{{tempFilePaths }}" mode="scaleToFill" style="height: 260px" />
+<view class="bt-view" >
+<view class="bt" wx:for="{{ocrlist.data.items}}">
+  {{item.itemstring}}
+</view>
+</view>
+</view>
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section2">
+        {{edit}} 基本信息(Base Information)
+
+
+        <picker name="_porttype" bindchange="pickport" range-key='name' value="{{porttype[portindex].name}}" range="{{porttype}}">
+          <view class="row">
+            <input hidden='false' name="porttype" placeholder="护照类型" value="{{porttype[portindex].name}}" /> 护照类型(Type)：
+            <view wx:if="{{lable1}}">{{list[0].porttype}} </view>
+            <view wx:else>{{porttype[portindex].name}} </view>
+
+          </view>
+        </picker>
+
+
+        <view class="row">
+          护照号码(PassportNo.)：
+
+          <input name="portcode" bindinput='portinput' value="{{list[0].portcode}}" placeholder="" focus="{{focus}}" /><text style='margin-left:10px;margin-right:10px;color:red'>*</text>
+
+          <!-- <view class="" wx:if="{{edit}}">
+        <input name="portcode1" value="{{list[0].portcode}}" placeholder="" focus="{{focus}}" /></view>
+        <view wx:else><input name="portcode" value="000000" placeholder="" focus="{{focus}}" /> </view> -->
+        </view>
+
+        <picker name="_countrycode" bindchange="pickcountry" range-key='name' value="{{country[countryindex].name}}" range="{{country}}">
+          <view class="row">
+            <input hidden='false' name="countrycode" placeholder="国家代码" value="{{country[countryindex].name}}" /> 国家代码(Country Code)：
+            <view wx:if="{{lable2}}">{{list[0].countrycode}} </view>
+            <view wx:else>{{country[countryindex].name}} </view>
+          </view>
+
+        </picker>
+
+
+
+
+
+        <picker name="_country" bindchange="pickcountry1" range-key='name' value="{{country[countryindex1].name}}" range="{{country}}">
+          <view class="row">
+            <input hidden='false' name="country" placeholder="国籍" value="{{country[countryindex1].name}}" /> 国籍(Nationality)：
+            <view wx:if="{{lable3}}">{{list[0].country}} </view>
+            <view wx:else>{{country[countryindex1].name}} </view>
+          </view>
+        </picker>
+
+      </view>
+      <view class="section2">
+        个人信息(Person Information)
+        <view class="row">
+          姓(FirstName):
+          <!-- <view wx:if="{{edit}}"><input name="firstname1" value="{{list[0].firstname}}" placeholder="" focus="{{focus}}" /></view>
+          <view wx:else><input name="firstname" placeholder="" focus="{{focus}}" /> </view> -->
+          <input name="firstname" value="{{list[0].firstname}}" placeholder="" focus="{{focus}}" /> 名(LastName)：
+          <!-- <view wx:if="{{edit}}"><input name="lastname1" value="{{list[0].lastname}}" placeholder="" focus="{{focus}}" /></view>
+          <view wx:else><input name="lastname" placeholder="" focus="{{focus}}" /> </view> -->
+          <input name="lastname" value="{{list[0].lastname}}" placeholder="" focus="{{focus}}" />
+        </view>
+
+        <picker name="_sex" bindchange="picksex" range-key='name' value="{{sex[sexindex].name}}" range="{{sex}}">
+          <view class="row">
+            <input hidden='false' name="sex" placeholder="性别" value="{{sex[sexindex].name}}" /> 性别(Sex)：
+            <view wx:if="{{lable4}}">{{list[0].sex}} </view>
+            <view wx:else>{{sex[sexindex].name}} </view>
+          </view>
+        </picker>
+
+
+
+        <picker name="_birthday" mode="date" value="{{date}}" start="1900-01-01" end="2020-12-31" bindchange="bindDateChange">
+          <view class="row">
+            出生日期(Date of birth):
+            <input hidden='false' name="birthday" placeholder="出生日期" value="{{date}}" />
+            <view wx:if="{{lable5}}">{{list[0].birthday}} </view>
+            <view wx:else>{{date}} </view>
+          </view>
+        </picker>
+
+        <picker name="_birthplace" bindchange="pickprovicy" range-key='name' value="{{provicy[provicyindex].name}}" range="{{provicy}}">
+          <view class="row">
+            出生地点(Place of birth)：
+            <input hidden='false' name="birthplace" placeholder="出生地点" value="{{provicy[provicyindex].name}}" />
+            <view wx:if="{{lable6}}">{{list[0].birthplace}} </view>
+            <view wx:else>{{provicy[provicyindex].name}} </view>
+          </view>
+        </picker>
+      </view>
+      <view class="section2">
+
+        其他信息(Other Information)
+
+        <picker name="_issuancedate" mode="date" value="{{visadate}}"  start="1900-01-01" end="2020-12-31" bindchange="bindvisaDateChange">
+          <view class="row">
+            <input hidden='false' name="issuancedate" placeholder="签发日期" value="{{visadate}}" /> 签发日期(Data of issue):
+            <view wx:if="{{lable7}}">{{list[0].issuancedate}} </view>
+            <view wx:else>{{visadate}} </view>
+          </view>
+        </picker>
+        <picker name="_issuanceplace" bindchange="pickvisaprovicy" range-key='name' value="{{provicy[visaprovicyindex].name}}" range="{{provicy}}">
+          <view class="row">
+            <input hidden='false' name="issuanceplace" placeholder="签发地点" value="{{provicy[visaprovicyindex].name}}" /> 签发地点(Place of issue)：
+            <view wx:if="{{lable8}}">{{list[0].issuanceplace}} </view>
+            <view wx:else>{{provicy[visaprovicyindex].name}} </view>
+          </view>
+        </picker>
+        <picker name="_issuanceauthority" bindchange="pickvisaplace" range-key='name' value="{{visaplace[visaplaceindex].name}}" range="{{visaplace}}">
+          <view class="row">
+            <input hidden='false' name="issuanceauthority" placeholder="签发机关" value="{{visaplace[visaplaceindex].name}}" /> 签发机关(Authority)：
+            <view wx:if="{{lable9}}">{{list[0].issuanceauthority}} </view>
+            <view wx:else>{{visaplace[visaplaceindex].name}}</view>
+          </view>
+        </picker>
+        <picker name="_limitdate" mode="date" value="{{limitdate}}"  start="2000-01-01" end="2050-12-31"  bindchange="bindlimitDateChange">
+          <view class="row">
+            <input hidden='false' name="limitdate" placeholder="有效期" value="{{limitdate}}" /> 有效期(Date of expify):
+            <view wx:if="{{lable10}}">{{list[0].limitdate}} </view>
+            <view wx:else>{{limitdate}}</view>
+          </view>
+        </picker>
+      </view>
+
+
+      <view class="section1">
+              <view class="bt-save">
+          <button hidden="{{showdel==true}}" class="button_bt" bindtap="scanimg">扫描</button>
+        </view>
+        <view class="bt-save">
+          <button hidden="{{showdel==true}}" class="button_bt" formType="submit">完成新增</button>
+        </view>
+        <view  class="bt-save">
+          <button hidden="{{showdel==false}}" class="button_bt" formType="submit">完成编辑</button>
+        </view>
+        <view data-select="{{list[0].portcode}}" bindtap='deluser'  class="bt-save">
+          <button class="button_bt" bindtap='returnpage'>删除</button>
+        </view>
+        <view  class="bt-save">
+          <button class="button_bt1" bindtap='returnpage'>取消</button>
+        </view>
+      </view>
+    </form>
+    </scroll-view>
+
+</view>

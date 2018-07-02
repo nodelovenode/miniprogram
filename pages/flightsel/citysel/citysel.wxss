@@ -1,0 +1,107 @@
+/* pages/flightsel/citysel.wxss */
+
+.bg {
+  background-color: #55b4ea;
+  height: 100%;
+}
+
+.title {
+  height: 40px;
+  background-color: #55b4ea;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+position: fixed 40px;
+}
+
+.input {
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #55b4ea;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-family: "华文黑体";
+  font-size: 13px;
+  width: 100%;
+
+}
+
+.swiper-tab {
+  font-family: "华文黑体";
+  width: 100%;
+  border-bottom: 2rpx solid #55b4ea;
+  text-align: center;
+  line-height: 80rpx;
+  color: #55b4ea;
+  background-color: #fff;
+position: fixed 40px;
+}
+
+.swiper-tab-list {
+  font-size: 15px;
+  display: inline-block;
+  width: 50%;
+}
+
+.citylist {
+  background: #ffffff;
+  font-size: 28rpx;
+}
+
+.tab1-title {
+  font-size: 12px;
+  font-family: "华文黑体";
+  line-height: 50rpx;
+  color: #999;
+  padding-left: 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.tab1-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab1-center {
+  width: 200rpx;
+  text-align: center;
+  line-height: 70rpx;
+  background: #fff;
+  border-radius: 35rpx;
+  margin:0 0 22rpx 22rpx;
+}
+
+
+
+
+.tab1-row {
+  font-size: 15px;
+  font-family: "华文黑体";
+  display: flex;
+  flex-direction: row;
+  color: #50beea;
+  border-bottom: 1px solid #eee;
+}
+
+.tab1-col {
+  font-size: 12px;
+  font-family: "华文黑体";
+  margin: 5px;
+}
+
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}

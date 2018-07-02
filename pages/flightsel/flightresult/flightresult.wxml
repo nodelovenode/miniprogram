@@ -1,0 +1,32 @@
+<!--pages/flightsel/flightresult/flightresult.wxml-->
+<view style='background-color:#55b4ea ;'>
+  <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+    <view hidden='true'>没有查询到内容</view>
+    <view class="result-box" wx:for="{{datalist}}" data-index="{{index}}" bindtap="bindflightinfo">
+      <view class="result-col">
+        <wxs module="substr">
+          var sub = function(val) {
+            return val.substring(11, 16)
+          }
+          module.exports.sub = sub;
+        </wxs>
+        <view class="result-title">
+          <view class="result-row1-view">{{item.name}}</view>
+          <view class="result-row1-view">{{item.company}}</view>
+          <view class="result-row1-view">{{item.date}}</view>
+        </view>
+        <view class="result-row2">
+          <view class="result-row2-view">
+            <view>出发时间</view>
+            <view>{{substr.sub(item.dep_time)}}</view>
+          </view>
+          <view class="result-row2-view">
+            <view>到达时间</view>
+            <view>{{substr.sub(item.arr_time)}}</view>
+          </view>
+        </view>
+        <view class="result-row3">{{item.status}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

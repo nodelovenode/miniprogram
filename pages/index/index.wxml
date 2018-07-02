@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="bg">
+  <view class="top">
+   <image style="width: 100%; height: 100%; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image>
+</view>
+<view class="body">
+<view class="mid">
+
+  <view class="bt" bindtap='getflight'>
+  
+     <view class="midimg" >
+<image style="width: 30px; height: 30px; background-color: #eeeeee;" mode="scaleToFill" src="./img/hb.png"></image>
+    </view>
+    <view>
+  航班动态
+    </view>
+
+</view>
+ <view class="bt" bindtap="trip">
+     <view class="midimg">
+<image style="width: 30px; height: 30px;" mode="scaleToFill" src="./img/trip.png"></image>
+    </view>
+    <view>
+  业务办理
+    </view>
+</view> 
+     
+<view class="bt" bindtap="getpassport">
+     <view class="midimg">
+<image style="width: 30px; height: 30px; background-color: #eeeeee;" mode="scaleToFill" src="./img/hz.png"></image>
+    </view>
+    <view>
+  护照办理
+    </view>
+</view>
+
+
+ 
+</view>
+<view class="mid">
+
+ <view class="bt" >
+     <view class="midimg">
+<image style="width: 30px; height: 30px; background-color: #eeeeee;" mode="scaleToFill" src="./img/bd.png"></image>
+    </view>
+    <view>
+  申请表样式
+    </view>
+</view>
+<view class="bt"  bindtap="getnotice">
+     <view class="midimg">
+<image style="width: 30px; height: 30px; background-color: #eeeeee;" mode="scaleToFill" src="./img/sm.png"></image>
+    </view>
+    <view >
+  出入境说明
+    </view>
+</view>
+</view>
+</view>
+</view>

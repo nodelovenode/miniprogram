@@ -1,0 +1,146 @@
+.bg{
+  background-color: #55b4ea;
+}
+.text {
+
+  border: 1px solid #00ff00;
+  margin-top: 5px;
+}
+
+.bottom-trip{
+  position: fixed;
+  bottom: 0;
+
+align-items: center;
+     font-family: "华文黑体";
+   font-size: 13px;
+
+   color:gray;
+
+}
+.block {
+
+      display: flex;  
+  flex-direction: column;  
+  margin: 5px;
+  border: 1px solid #eeeeee;
+}
+.r{
+   display:flex;
+  flex-direction:row;
+   align-items:center;
+padding-left: 5px;
+margin-left: 20px;
+  text-align: left;
+}
+.row{
+ border: 1px solid #eeeeee;
+   font-family: "华文黑体";
+   font-size: 12px;
+background-color: white;
+   height: 60px;
+    display:flex;
+  flex-direction:row;
+   align-items:center;
+padding-left: 5px;
+  text-align: center;
+}
+.title {
+  background-color: #ffffff;
+ display:flex;
+  flex-direction:row;
+   align-items:center;
+padding-left: 5px;
+  text-align: center;
+
+justify-content: center;
+height: 30px;
+   font-family: "华文黑体";
+   font-size: 13px;
+}
+.t{
+  padding-left: 5px;
+  padding-top: 5px;
+  height: 30px;
+   font-family: "华文黑体";
+   font-size: 13px;
+      align-items:center;
+align-content: center;
+}
+
+
+
+
+.section{
+  border:1px solid #eeeeee;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display:flex;
+  flex-direction:column;
+padding-bottom: 5px;
+   height: 100%;
+      font-family: "华文黑体";
+   font-size: 13px;
+  margin: 20px;
+
+}
+
+.content {
+
+border-radius: 5px;
+width: 100%;
+height: 30px;
+border-bottom: 1px solid #eeeeee;
+   display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: center;
+  word-break:break-all;
+}
+.td1
+{ font-family: "华文黑体";
+   font-size: 15px;
+  width: 100px;
+
+}
+.td2
+{ font-family: "华文黑体";
+   font-size: 13px;
+  width:100%;
+  color:#55b4ea;
+
+}
+.ct{
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-content: left;
+  align-items: left;
+  justify-content: left;
+}
+
+.bt{
+
+  margin-right: 5px;
+
+     font-family: "华文黑体";
+   font-size: 12px;
+   background-color:#eeeeee;
+border-radius: 5px;
+
+}
+.cpu{
+align-content: right;
+align-items: right;
+  display:flex;
+  flex-direction:row-reverse;
+}
+.hint{
+  text-align: center;
+       font-family: "华文黑体";
+   font-size: 14px;
+   height: 80px;
+   width: 100%;
+   padding-top: 30px;
+
+}

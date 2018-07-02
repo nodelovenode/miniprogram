@@ -1,0 +1,140 @@
+/* pages/center/center.wxss */
+.bg {
+ display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  word-break:break-all;
+background-color: #55b4ea;
+
+}
+.logo{
+  display: flex;  
+    align-items:center;
+  flex-direction: column;  
+  justify-content: center;  
+    padding-top: 40px;
+     font-family: "华文黑体";
+   font-size: 13px;
+   margin-bottom: 10px;
+}
+.profile{
+  width: 100rpx;
+  height: 100rpx;
+  border: 0 ;
+  border-radius: 100rpx;
+  background-color: #fff;
+
+}
+
+.button_bt{
+  
+
+width: 200px;
+     font-family: "华文黑体";
+   font-size: 13px;
+
+   text-align: center;
+   background-color:#55b4ea;
+   color: white;
+}
+.top {
+  width: 100%;
+margin-top: 10%;
+display:flex;
+  flex-direction:row;
+  align-items:center;
+height:60px;
+padding-left: 5px;
+
+  text-align: center;
+
+}
+
+.usertop{
+
+
+display:flex;
+  flex-direction:row;
+  align-items:center;
+height:70px;
+padding-left: 5px;
+background-color: #55b4ea;
+padding-top: 5px; 
+}
+.usertop-left{
+   margin:10px;
+  display: flex;
+  flex-direction: column;
+     font-family: "华文黑体";
+   font-size: 10px;
+
+}
+.usertop-right-b{
+   font-family: "华文黑体";
+   font-size: 16px;
+   color: #eeeeee;
+
+}
+.usertop-right-c {
+   font-family: "华文黑体";
+   font-size: 10px;
+   color: #eeeeee;
+}
+
+.top-img {
+
+  width: 100%;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.img {
+  width: 40px;
+  height: 40px;
+
+}
+.body{
+
+
+  height: 300px;
+background-color: #ffffff;
+align-items: left;
+}
+.row {
+
+ border: 1px solid #eeeeee;
+   font-family: "华文黑体";
+   font-size: 13px;
+background-color: white;
+   height: 40px;
+    display:flex;
+  flex-direction:row;
+   align-items:center;
+padding-left: 15px;
+
+  text-align: center;
+}
+
+.head {
+height:100px;
+width:100%;
+background-color: #ffffff;
+
+}
+
+.t{
+
+  font-family: 华文黑体;
+  font-size: 11px;
+}
+
+.t1{
+
+  font-family: 华文黑体;
+  font-size: 13px;
+}

@@ -1,0 +1,69 @@
+<!--pages/form/form.wxml-->
+<view class="bg">
+  <form bindsubmit="formBindsubmit">
+  <view wx:for="{{list}}" class="form1">
+
+    <view class="body1">
+      <view class="row">
+           <input hidden='false' value="{{item.uuid}}" class="input" name="uuid{{index}}" placeholder="uuid" />
+                      <input hidden='false' value="{{phonenumber}}" class="input" name="phonenumber{{index}}" placeholder="phonenumber" />
+        <view class="itemView">{{firstname}}</view>
+        <view>
+          <input value="{{item.firstname}}" class="input" name="firstname{{index}}" placeholder="请输入您的姓氏" />
+        </view>
+      </view>
+      <view class="row">
+        <view class="itemView">{{lastname}}</view>
+        <view>
+          <input value="{{item.lastname}}" class="input" name="lastname{{index}}" placeholder="请输入您的名字"  />
+        </view>
+      </view>
+      <view class="row">
+        <view class="itemView">{{birthday}}</view>
+        <view>
+          <picker  mode="date" name="" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+            <view>
+              
+                        <input class="input" name="birthday{{index}}" value= "{{item.birthday}}" placeholder="请输入您的出生日期"  />
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="row">
+        <view class="itemView">航班号</view>
+        <view>
+          <input class="input" name="flightno{{index}}" placeholder="请输入您乘坐的航班号码"  value="{{flightno}}" />
+        </view>
+      </view>
+      <view class="t1">1.你是否曾在日本或其他国家的刑事案件中被判有罪？(Have you ever been found guilty in a criminal case in japan or anther country?)</view>
+      <radio-group class="radio-group" name="otheroption1{{index}}" bindchange="radioChange">
+        <label class="radio">
+          <radio checked="ture" value="0" name="1" />否</label>
+        <label class="radio">
+          <radio checked="" value="1" name="1" />是</label>
+      </radio-group>
+      <view class="t1">2.您目前是否持有毒品、大麻、鸦片、助燃剂或其他受控物质、剑、炸药或其他物品？(Do you presently have in you possession narcotics,marijuana,opium,stimlants,or other controlled substance,swords,explosives or other such items?)</view>
+      <radio-group class="radio-group"name="otheroption2{{index}}" bindchange="radioChange">
+        <label class="radio">
+          <radio checked="ture" value="0" name="1" />否</label>
+        <label class="radio">
+          <radio checked="" value="1" name="1" />是</label>
+      </radio-group>
+
+    </view>
+  
+   
+  </view>
+   <button class="bt" type="primary" form-type="submit">申报表单</button>
+        </form>
+
+<view class="switchbody">
+  <view class="t2">是否进行个人物品申报</view>
+  <view class="switch">
+    <switch bindtap="onChangeShowState" type="switch" checked='{{initialSwitch}}' bindchange="switchChecked"></switch>
+  </view>
+</view>
+<view wx:if="{{cswitch}}" class="body2">我是隐藏的</view>
+<view>{{form}}</view>
+
+</view>

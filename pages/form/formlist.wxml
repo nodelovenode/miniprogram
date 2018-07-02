@@ -1,0 +1,13 @@
+<view class="bg">
+ <scroll-view style="background-color:#eeeeee;height:{{winHeight}}px;" scroll-y="true">
+<view wx:for="{{formlist}}" class="section">
+<view class="title">{{item.country}}</view>
+<!-- 根据不同国家来区分不同的表单 -->
+<!-- 动态标签，动态数据 -->
+<view class="content" wx:for="{{formc}}">
+<view>{{item.lable}}</view>
+</view>
+
+</view>
+ </scroll-view>
+</view>

@@ -1,0 +1,45 @@
+<view style="background-color:#55b4ea;height:{{winHeight}}px;">
+  <scroll-view class="block">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="section2">
+        认证信息(Base Information)
+
+        <view class="row">
+          <view>
+            姓名：</view>
+          <view hidden='{{caenable==false}}' class="td">
+            <input name="name" placeholder="例如：王XX" />
+          </view>
+          <view hidden='{{caenable==true}}' class="td">
+            {{name}}
+          </view>
+        </view>
+        <view class="row">
+          <view>
+            身份证号码：</view>
+          <view hidden='{{caenable==false}}' class="td">
+            <input  maxlength="18" type="idcard" name="caid" placeholder="请输入18位号码" />
+          </view>
+          <view hidden='{{caenable==true}}' class="td">
+            {{caid}}
+          </view>
+        </view>
+
+
+      </view>
+      <view class="section1">
+        <view class="bt-save">
+          <button disabled='{{caenable==false}}' class="button_bt" formType="submit">完成认证</button>
+        </view>
+
+        <!-- <view class="bt-save">
+          <button class="button_bt1" bindtap='returnpage'>取消</button>
+        </view>
+        <view class="bt-save">
+          <button class="button_bt1" bindtap='test'>取消</button>
+        </view> -->
+      </view>
+    </form>
+  </scroll-view>
+
+</view>

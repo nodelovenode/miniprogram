@@ -1,0 +1,23 @@
+<view style="background-color:#55b4ea;height:{{winHeight}}px;">
+
+
+    <view wx:for="{{triplist}}" class="row">
+
+      <!-- 上传申请人 -->
+      <view class='section'>
+        <view class="td">
+          申请人信息
+        </view>
+
+        <view class="td1">
+          {{personlist.length==null?0:personlist.length}}条
+        </view>
+      </view>
+
+    </view>
+  <view class="btview"  bindtap='upload'>
+
+           <button type="primary"class="button_bt" bindtap="upload">上传到云端</button>
+
+  </view>
+</view>
